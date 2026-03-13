@@ -14,7 +14,7 @@ Global config Page layouts Domain UI User actions Domain models Atomic utils
 
 | Layer       | Responsibility                               | Example Slice                                          | Shadcn Usage           | Tests                                   |
 | ----------- | -------------------------------------------- | ------------------------------------------------------ | ---------------------- | --------------------------------------- |
-| `app/`      | Global providers, routing, error boundaries  | `app/providers.tsx`                                    | -                      | `app.unit.test.tsx`                     |
+| `app/`      | Global providers, routing, error boundaries  | -                                                      | -                      | -                                       |
 | `pages/`    | Page-level composition                       | `pages/explorer.tsx`                                   | -                      | `pages.unit.test.tsx`                   |
 | `widgets/`  | Reusable domain UI blocks **(own model/ui)** | `widgets/gif-results/`                                 | Composes Button, Card  | `model.unit.test.tsx`                   |
 | `features/` | User features **(model/ui/lib)**             | `features/gif-search/`                                 | Composes Input, Select | `model.unit.test.tsx`<br>`int.test.tsx` |
@@ -79,6 +79,18 @@ shared/ui/shadcn/
   }
 }
 ```
+
+## Naming Conventions (FSD + React 2026)
+
+| Element            | Convention                               | Example                |
+| ------------------ | ---------------------------------------- | ---------------------- |
+| **Folders/Slices** | `kebab-case`                             | `features/gif-search/` |
+| **Components**     | `kebab-case.tsx` or `PascalCase.tsx`     | `search-form.tsx`      |
+| **Hooks**          | `use-kebab-case.ts` or `useCamelCase.ts` | `use-gif-search.ts`    |
+| **Types**          | `PascalCase`                             | `GiphyGif`             |
+| **Variables**      | `camelCase`                              | `searchQuery`          |
+
+### Your Structure
 
 ## Commit Convention
 
