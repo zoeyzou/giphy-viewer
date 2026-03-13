@@ -19,7 +19,7 @@ Global config Page layouts Domain UI User actions Domain models Atomic utils
 | `widgets/`  | Reusable domain UI blocks **(own model/ui)** | `widgets/gif-results/`                                 | Composes Button, Card  | `model.unit.test.tsx`                   |
 | `features/` | User features **(model/ui/lib)**             | `features/gif-search/`                                 | Composes Input, Select | `model.unit.test.tsx`<br>`int.test.tsx` |
 | `entities/` | Pure domain types                            | `entities/GiphyGif.ts`                                 | -                      | `entities.unit.test.tsx`                |
-| `shared/`   | Atomic primitives, cross-cutting             | `shared/ui/shadcn/Button.tsx`<br>`shared/api/giphy.ts` | Raw shadcn imports     | `shared.unit.test.tsx`                  |
+| `shared/`   | Atomic primitives, cross-cutting             | `shared/ui/shadcn/Button.tsx`<br>`shared/api/Giphy.ts` | Raw shadcn imports     | `shared.unit.test.tsx`                  |
 
 ## Domain Model (entities/GiphyGif.ts)
 
